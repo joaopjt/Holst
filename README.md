@@ -1,13 +1,8 @@
 # :snowman: Holst
-A free web composer for musicians.
+A free composer software/web application for musicians.
 
 # Getting started
-The web application can be accessed thankfuly for github site web host.
-You can check the live demo [clicking here](#)
-
-# Instalation
-You can clone the project and run it in your machine, or host it in a docker component,
-using the image of the project hosted by the owner.
+Comming soon...
 
 # Wiki
 The wiki is a complete tutorial of music theory for begginers.
