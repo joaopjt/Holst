@@ -1,4 +1,4 @@
-# :snowman: Holst
+# Holst
 A free composer software/web application for musicians based on WebKit (Apple).
 
 # Getting started
