@@ -1,3 +1,4 @@
 module.exports = {
-  user: 'John Doe'
+  title: 'Holst',
+  description: 'A web composer'
 }
