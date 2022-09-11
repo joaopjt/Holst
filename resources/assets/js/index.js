@@ -5,5 +5,3 @@ import App from './base/_app';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
-
-console.log('John Doe');
