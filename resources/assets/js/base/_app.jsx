@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
 
 import { GoogleAuth } from 'google-auth-library';
 import { google } from 'googleapis'; 
@@ -24,10 +25,10 @@ export default class App extends Component {
 
   render() {
     return (
-      <div class="app">
+      <Provider store={store}>
         <Menu />
         <Main />
-      </div>
+      </Provider>
     );
   }
 };
