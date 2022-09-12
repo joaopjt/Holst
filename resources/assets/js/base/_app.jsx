@@ -15,10 +15,12 @@ export default class App extends Component {
     this.googleSignIn();
   }
 
-  googleSignIn() {
+  async googleSignIn() {
     this.auth = new GoogleAuth({
       scopes: 'https://www.googleapis.com/auth/drive',
     });
+
+    await this.auth.getClient();
 
     this.googleService = google.drive({version: 'v3', this.auth});
   }
