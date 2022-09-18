@@ -1,35 +1,31 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from '../../../store';
 
-import Menu from './_menu';
+import Menu from '../base/_menu';
 
-import HomePage from '../pages/home'
-import ComposerPage from '../pages/app'
+import HomePage from './_home'
+import ComposerPage from './_app'
 
 export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
         <Menu />
-        <div className="main">
+        <main className="main">
           <Router>
-            <Switch>
-              <Route path="/app">
-                <ComposerPage />
-              </Route>
-              <Route path="/">
-                <HomePage />
-              </Route>
-            </Switch>
+            <Routes>
+              <Route path="/app" element={<ComposerPage />} />
+              <Route path="/" element={<HomePage />} />
+            </Routes>
           </Router>
-        </div>
+        </main>
       </Provider>
     );
   }

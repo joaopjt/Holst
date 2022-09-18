@@ -1,4 +1,4 @@
 module.exports = {
   title: 'Holst',
-  description: 'A web composer'
+  description: 'A online web composer.'
 }
