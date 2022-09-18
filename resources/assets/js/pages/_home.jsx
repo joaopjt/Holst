@@ -4,8 +4,10 @@ export default class HomePage extends Component {
   render() {
     return (
       <div className="home">
-        <form className="login" method="POST" >
-        </form>
+        <div className="login">
+          <h1 className="login-title">Login with Google</h1>
+          <div id="g_id_signin"></div>
+        </div>
       </div>
     )
   }

@@ -21,6 +21,7 @@ export default class App extends Component {
         <main className="main">
           <Router>
             <Routes>
+              <Route path="/app/:id" element={<ComposerPage />} />
               <Route path="/app" element={<ComposerPage />} />
               <Route path="/" element={<HomePage />} />
             </Routes>

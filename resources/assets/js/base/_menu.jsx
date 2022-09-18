@@ -4,11 +4,12 @@ export default class Menu extends Component {
   render() {
     return (
       <div className="menu">
-        <span className="menu-title">Holst</span>
-        <a href="#" className="sign-in">Sign In</a>
-        <a href="#" className="user">
-          <span className="user-picture"></span>
-        </a>
+        <h1 className="menu-title">Holst</h1>
+
+        <span className="menu-separator"></span>
+
+        <a href="#" className="menu-link">Sign In</a>
+        <a href="/app" className="menu-link">Compose</a>
       </div>
     );
   }

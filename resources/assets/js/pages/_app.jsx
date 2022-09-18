@@ -5,7 +5,7 @@ export default class ComposerPage extends Component {
     return (
       <div className="content">
         
-        
+        <div className="paper"></div>
       </div>
     )
   }
