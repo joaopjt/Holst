@@ -1,8 +1,11 @@
-$bg: #ccc;
+$dark-gray-color: #555;
+$gray-color: #ccc;
+$white-color: #fff;
+$black-color: #000;
 
 body {
-  background-color: $bg;
   margin: 0;
+  padding: 0;
 }
 
 .demo {
@@ -10,4 +13,31 @@ body {
   max-width: 600px;
   margin: 40px auto;
   text-align: center;
+}
+
+.menu {
+  background: $dark-gray-color;
+  font-size: 0;
+  padding: 8px;
+  width: 100%;
+}
+
+.menu-title {
+  font-family: Arial;
+  font-size: 25px;
+  font-weight: 700;
+  color: $white-color;
+}
+
+.main {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  background: $white-color;
+  height: 2400px;
+  margin: 0 auto;
+  width: 1024px;
 }
