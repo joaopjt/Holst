@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
+import store from '../../../store';
 
 import { GoogleAuth } from 'google-auth-library';
 import { google } from 'googleapis'; 
@@ -16,13 +17,17 @@ export default class App extends Component {
   }
 
   async googleSignIn() {
+    let t = this;
     this.auth = new GoogleAuth({
       scopes: 'https://www.googleapis.com/auth/drive',
     });
 
     await this.auth.getClient();
 
-    this.googleService = google.drive({version: 'v3', this.auth});
+    this.googleService = google.drive({
+      auth: this.auth,
+      version: 'v3'
+    });
   }
 
   render() {

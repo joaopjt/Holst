@@ -2,7 +2,7 @@
 
 require('dotenv').config();
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 const env = require('./core/helpers/env');
 const Core = require('./core/index');
 const Africa = require('africa.js');

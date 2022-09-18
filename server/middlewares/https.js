@@ -1,12 +1,11 @@
-// HTTPS request force
+// HTTPS middleware
 const requireHttps = require('hapi-require-https');
-const https = App.https;
 
 module.exports = function (Server) {
-  if (https && https.enable) {
+  if (App.https && App.https.enable) {
     Server.register({
       register: requireHttps,
-      options:  https.options
+      options:  App.https.options
     });
   }
 }
