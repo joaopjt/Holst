@@ -23,7 +23,7 @@ body {
   font-size: 0;
   line-height: 0;
   padding: 15px 20px;
-  width: 100%;
+  width: calc(100% - 40px);
 }
 
 .menu-title {
@@ -104,7 +104,80 @@ body {
 .paper {
   background: $white-color;
   box-shadow: $dark-gray-color 0px 0px 10px 1px; 
-  height: 2400px;
-  margin: 150px auto 0;
-  width: 1024px;
+  height: 1200px;
+  padding: 50px 120px;
+  margin: 150px auto;
+  text-align: center;
+  width: calc(1024px - 240px);
+}
+
+.paper-title {
+  font-family: Tahoma;
+  font-size: 30px;
+  line-height: 1;
+  text-align: center;
+  width: auto;
+
+  &--input {
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+.paper-line {
+  align-items: center;
+  display: flex;
+  font-size: 0;
+  line-height: 0;
+}
+
+.bar {
+  display: inline-block;
+  width: 25%;
+}
+
+.bar-notes {
+  display: inline-block;
+  width: 25%;
+
+  &--five {
+    width: 20%;
+  }
+
+  &--six {
+    width: 17.5%;
+  }
+
+  &--seven {
+    width: 14.285%;
+  }
+
+  &--first {
+    width: 17.5%;
+    
+    &.bar-notes--five {
+      width: 14.285%;
+    }
+
+    &.bar-notes--six {
+      width: 12.5%;
+    }
+
+    &.bar-notes--seven {
+      width: 11.111%;
+    }
+  }
+}
+
+.line {
+  background: $black-color;
+  display: inline-block;
+  margin: 5px 0;
+  height: 1px;
+  width: 100%;
+
+  &--bold {
+    height: 2px;
+    margin: 4.5px 0;
+  }
 }
