@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import instrumentList from '../data/instruments.json';
 
-export default class InstrumentsPage extends Component {
+export default class ComposerPage extends Component {
   constructor() {
     super();
     this.state = {

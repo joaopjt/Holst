@@ -11,7 +11,9 @@ import store from '../../../store';
 import Menu from '../base/_menu';
 
 import HomePage from './_home'
-import ComposerPage from './_app'
+import InstrumentsPage from './_app'
+import ComposerPage from './_composer'
+import PianoPage from './instruments/_piano'
 
 export default class App extends Component {
   render() {
@@ -21,8 +23,9 @@ export default class App extends Component {
         <main className="main">
           <Router>
             <Routes>
+              <Route path="/piano" element={<PianoPage instrument="Acustic Piano"/>} />
               <Route path="/app/:id" element={<ComposerPage />} />
-              <Route path="/app" element={<ComposerPage />} />
+              <Route path="/app" element={<InstrumentsPage />} />
               <Route path="/" element={<HomePage />} />
             </Routes>
           </Router>
