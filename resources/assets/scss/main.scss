@@ -323,6 +323,45 @@ body {
     transform: translate(-50%, -100%);
     width: 16.58px;
   }
+
+  &--8-bars:after {
+    background: url('/assets/images/svg/numbers/8.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    content: '';
+    height: 21.41px;
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    transform: translateX(-50%);
+    width: 16.37px;
+  }
+
+  &--4-bars:after {
+    background: url('/assets/images/svg/numbers/4.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    content: '';
+    height: 20.71px;
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    transform: translateX(-50%);
+    width: 17.78px;
+  }
+
+  &--2-bars:after {
+    background: url('/assets/images/svg/numbers/2.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    content: '';
+    height: 21.12px;
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    transform: translateX(-50%);
+    width: 16.78px;
+  }
 }
 
 .line {
