@@ -186,7 +186,36 @@ body {
 
 .bar-notes {
   display: inline-block;
+  position: relative;
   width: 25%;
+
+  &--clef {
+    &:before {
+      background: url('/assets/images/svg/clef.svg') no-repeat;
+      background-position: center center;
+      background-size: cover;
+      content: '';
+      height: 67px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 23px;
+    }
+
+    &:after {
+      background: url('/assets/images/svg/time-signature.svg') no-repeat;
+      background-position: center center;
+      background-size: cover;
+      content: '';
+      height: 27px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(50%, -50%);
+      width: 6px;
+    }
+  }
 
   &--two {
     width: 50%;
@@ -202,6 +231,97 @@ body {
 
   &--seven {
     width: 14.285%;
+  }
+
+  &--7-notes:before {
+    background: url('/assets/images/svg/numbers/7.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    content: '';
+    height: 20.63px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+    width: 16.58px;
+  }
+
+  &--6-notes:before {
+    background: url('/assets/images/svg/numbers/6.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    content: '';
+    height: 20.63px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+    width: 16.58px;
+  }
+
+  &--5-notes:before {
+    background: url('/assets/images/svg/numbers/5.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    content: '';
+    height: 20.63px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+    width: 16.58px;
+  }
+
+  &--4-notes:before {
+    background: url('/assets/images/svg/numbers/4.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    content: '';
+    height: 20.63px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+    width: 16.58px;
+  }
+
+  &--3-notes:before {
+    background: url('/assets/images/svg/numbers/3.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    content: '';
+    height: 20.63px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+    width: 16.58px;
+  }
+
+  &--2-notes:before {
+    background: url('/assets/images/svg/numbers/2.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    content: '';
+    height: 20.63px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+    width: 16.58px;
+  }
+
+  &--1-notes:before {
+    background: url('/assets/images/svg/numbers/1.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    content: '';
+    height: 20.63px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+    width: 16.58px;
   }
 }
 
