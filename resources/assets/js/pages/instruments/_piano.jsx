@@ -1,4 +1,4 @@
-  import React, { Component } from 'react';
+import React, { Component } from 'react';
 
 export default class PianoPage extends Component {
   constructor(props) {
@@ -54,14 +54,14 @@ export default class PianoPage extends Component {
           <div className="paper-content paper-content--piano">
             <div className="paper-line">
               <div className="bar bar--first" data-bar={0}>
-                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-1} data-note={1}>
+                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
                 </div>
-                <div className="bar-notes bar-notes--7-notes bar-notes--4-bars bar-notes--two" data-note-bar={-1} data-note={2}>
+                <div className="bar-notes bar-notes--7-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
@@ -74,7 +74,7 @@ export default class PianoPage extends Component {
             </div>
             <div className="paper-line paper-line--bass-choir">
               <div className="bar bar--first" data-bar={0}>
-                <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={1}>
+                <div className="bar-notes bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>

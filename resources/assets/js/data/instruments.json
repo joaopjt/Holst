@@ -2,455 +2,455 @@
   "instruments": [
     { 
       "name": "Acustic Grand Piano",
-      "image": "instrument.png"
+      "image": "piano.png"
     },
     { 
       "name": "Bright Acustic Piano",
-      "image": "instrument.png"
+      "image": "piano.png"
     },
     { 
       "name": "Eletric Grand Piano",
-      "image": "instrument.png"
+      "image": "piano.png"
     },
     { 
       "name": "Honky-tonk Piano",
-      "image": "instrument.png"
+      "image": "piano.png"
     },
     { 
       "name": "Eletric Piano",
-      "image": "instrument.png"
+      "image": "piano.png"
     },
     { 
       "name": "Harp",
-      "image": "instrument.png"
+      "image": "harp.png"
     },
     { 
       "name": "Clavinet",
-      "image": "instrument.png"
+      "image": "clavinet.png"
     },
     { 
       "name": "Celesta",
-      "image": "instrument.png"
+      "image": "celesta.png"
     },
     { 
       "name": "Glockenspiel",
-      "image": "instrument.png"
+      "image": "glockenspiel.png"
     },
     { 
       "name": "Music Box",
-      "image": "instrument.png"
+      "image": "music-box.png"
     },
     { 
       "name": "Vibraphone",
-      "image": "instrument.png"
+      "image": "vibraphone.png"
     },
     { 
       "name": "Marimba",
-      "image": "instrument.png"
+      "image": "marimba.png"
     },
     { 
       "name": "Xylophone",
-      "image": "instrument.png"
+      "image": "xylophone.png"
     },
     { 
       "name": "Tubular Bells",
-      "image": "instrument.png"
+      "image": "tubular-bells.png"
     },
     { 
       "name": "Dulcimer",
-      "image": "instrument.png"
+      "image": "dulcimer.png"
     },
     { 
       "name": "Drawbar Organ",
-      "image": "instrument.png"
+      "image": "drawbar-organ.png"
     },
     { 
       "name": "Percussive Organ",
-      "image": "instrument.png"
+      "image": "organ.png"
     },
     { 
       "name": "Rock Organ",
-      "image": "instrument.png"
+      "image": "organ.png"
     },
     { 
       "name": "Church Organ",
-      "image": "instrument.png"
+      "image": "organ.png"
     },
     { 
       "name": "Reed Organ",
-      "image": "instrument.png"
+      "image": "organ.png"
     },
     { 
       "name": "Accordion Organ",
-      "image": "instrument.png"
+      "image": "organ.png"
     },
     { 
       "name": "Harmonica Organ",
-      "image": "instrument.png"
+      "image": "organ.png"
     },
     { 
       "name": "Tango Accordion Organ",
-      "image": "instrument.png"
+      "image": "organ.png"
     },
     { 
       "name": "Acustic Guitar (nylon)",
-      "image": "instrument.png"
+      "image": "guitar.png"
     },
     { 
       "name": "Acustic Guitar (steel)",
-      "image": "instrument.png"
+      "image": "guitar.png"
     },
     { 
       "name": "Eletric Guitar (jazz)",
-      "image": "instrument.png"
+      "image": "guitar.png"
     },
     { 
       "name": "Eletric Guitar (clean)",
-      "image": "instrument.png"
+      "image": "guitar.png"
     },
     { 
       "name": "Eletric Guitar (muted)",
-      "image": "instrument.png"
+      "image": "guitar.png"
     },
     { 
       "name": "Overdriven Guitar",
-      "image": "instrument.png"
+      "image": "guitar.png"
     },
     { 
       "name": "Distortion Guitar",
-      "image": "instrument.png"
+      "image": "guitar.png"
     },
     { 
       "name": "Guitar Harmonics",
-      "image": "instrument.png"
+      "image": "guitar.png"
     },
     { 
       "name": "Acustic Bass",
-      "image": "instrument.png"
+      "image": "bass.png"
     },
     { 
       "name": "Eletric Bass (finger)",
-      "image": "instrument.png"
+      "image": "bass.png"
     },
     { 
       "name": "Eletric Bass (pick)",
-      "image": "instrument.png"
+      "image": "bass.png"
     },
     { 
       "name": "Fretless Bass",
-      "image": "instrument.png"
+      "image": "bass.png"
     },
     { 
       "name": "Slap Bass 1",
-      "image": "instrument.png"
+      "image": "bass.png"
     },
     { 
       "name": "Slap Bass 2",
-      "image": "instrument.png"
+      "image": "bass.png"
     },
     { 
       "name": "Synth Bass 1",
-      "image": "instrument.png"
+      "image": "bass.png"
     },
     { 
       "name": "Synth Bass 2",
-      "image": "instrument.png"
+      "image": "bass.png"
     },
     { 
       "name": "Violin",
-      "image": "instrument.png"
+      "image": "violin.png"
     },
     { 
       "name": "Viola",
-      "image": "instrument.png"
+      "image": "viola.png"
     },
     { 
       "name": "Cello",
-      "image": "instrument.png"
+      "image": "cello.png"
     },
     { 
       "name": "Contrabass",
-      "image": "instrument.png"
+      "image": "contrabass.png"
     },
     { 
       "name": "Tremolo Strings",
-      "image": "instrument.png"
+      "image": "tremolo-strings.png"
     },
     { 
       "name": "Pizzicato Strings",
-      "image": "instrument.png"
+      "image": "pizzicato-strings.png"
     },
     { 
       "name": "Ochestral Harp",
-      "image": "instrument.png"
+      "image": "harp.png"
     },
     { 
       "name": "Timpani",
-      "image": "instrument.png"
+      "image": "timpani.png"
     },
     { 
       "name": "String Ensemble 1",
-      "image": "instrument.png"
+      "image": "string-ensemble.png"
     },
     { 
       "name": "String Ensemble 2",
-      "image": "instrument.png"
+      "image": "string-ensemble.png"
     },
     { 
       "name": "Synth Strings 1",
-      "image": "instrument.png"
+      "image": "synth.png"
     },
     { 
       "name": "Synth Strings 2",
-      "image": "instrument.png"
+      "image": "synth.png"
     },
     { 
       "name": "Choir Aahs",
-      "image": "instrument.png"
+      "image": "choir.png"
     },
     { 
       "name": "Voice Oohs",
-      "image": "instrument.png"
+      "image": "voice.png"
     },
     { 
       "name": "Synth Choir",
-      "image": "instrument.png"
+      "image": "Synth-choir.png"
     },
     { 
       "name": "Orchestra Hit",
-      "image": "instrument.png"
+      "image": "orchestra-hit.png"
     },
     { 
       "name": "Trumpet",
-      "image": "instrument.png"
+      "image": "trumpet.png"
     },
     { 
       "name": "Trombone",
-      "image": "instrument.png"
+      "image": "trombone.png"
     },
     { 
       "name": "Tuba",
-      "image": "instrument.png"
+      "image": "tuba.png"
     },
     { 
       "name": "Muted Trumpet",
-      "image": "instrument.png"
+      "image": "muted-trumpet.png"
     },
     { 
-      "name": "Frenh Horn",
-      "image": "instrument.png"
+      "name": "French Horn",
+      "image": "french-horn.png"
     },
     { 
       "name": "Brass Section",
-      "image": "instrument.png"
+      "image": "brass-section.png"
     },
     { 
       "name": "Synth Brass 1",
-      "image": "instrument.png"
+      "image": "synth-brass.png"
     },
     { 
       "name": "Synth Brass 2",
-      "image": "instrument.png"
+      "image": "synth-brass.png"
     },
     { 
       "name": "Soprano Sax",
-      "image": "instrument.png"
+      "image": "soprano-sax.png"
     },
     { 
       "name": "Alto Sax",
-      "image": "instrument.png"
+      "image": "alto-sax.png"
     },
     { 
       "name": "Baritone Sax",
-      "image": "instrument.png"
+      "image": "baritone-sax.png"
     },
     { 
       "name": "Oboe",
-      "image": "instrument.png"
+      "image": "oboe.png"
     },
     { 
       "name": "English Horn",
-      "image": "instrument.png"
+      "image": "english-horn.png"
     },
     { 
       "name": "Bassoon",
-      "image": "instrument.png"
+      "image": "bassoon.png"
     },
     { 
       "name": "Clarinet",
-      "image": "instrument.png"
+      "image": "clarinet.png"
     },
     { 
       "name": "Piccolo",
-      "image": "instrument.png"
+      "image": "piccolo.png"
     },
     { 
       "name": "Flute",
-      "image": "instrument.png"
+      "image": "flute.png"
     },
     { 
       "name": "Recorder",
-      "image": "instrument.png"
+      "image": "recorder.png"
     },
     { 
       "name": "Pan Flute",
-      "image": "instrument.png"
+      "image": "pan-flute.png"
     },
     { 
       "name": "Blown bottle",
-      "image": "instrument.png"
+      "image": "blown-bottle.png"
     },
     { 
       "name": "Shakuhachi",
-      "image": "instrument.png"
+      "image": "shakuhachi.png"
     },
     { 
       "name": "Whistle",
-      "image": "instrument.png"
+      "image": "whistle.png"
     },
     { 
       "name": "Ocarina",
-      "image": "instrument.png"
+      "image": "ocarina.png"
     },
     { 
       "name": "Lead 1 (square)",
-      "image": "instrument.png"
+      "image": "lead.png"
     },
     { 
       "name": "Lead 2 (sawtooth)",
-      "image": "instrument.png"
+      "image": "lead.png"
     },
     { 
       "name": "Lead 3 (calliope)",
-      "image": "instrument.png"
+      "image": "lead.png"
     },
     { 
       "name": "Lead 4 (chiff)",
-      "image": "instrument.png"
+      "image": "lead.png"
     },
     { 
       "name": "Lead 5 (charang)",
-      "image": "instrument.png"
+      "image": "lead.png"
     },
     { 
       "name": "Lead 6 (voice)",
-      "image": "instrument.png"
+      "image": "lead.png"
     },
     { 
       "name": "Lead 7 (fifths)",
-      "image": "instrument.png"
+      "image": "lead.png"
     },
     { 
       "name": "Lead 8 (bass + lead)",
-      "image": "instrument.png"
+      "image": "lead.png"
     },
     { 
       "name": "Pad 1 (new age)",
-      "image": "instrument.png"
+      "image": "pad.png"
     },
     { 
       "name": "Pad 2 (warm)",
-      "image": "instrument.png"
+      "image": "pad.png"
     },
     { 
       "name": "Pad 3 (polysynth)",
-      "image": "instrument.png"
+      "image": "pad.png"
     },
     { 
       "name": "Pad 4 (choir)",
-      "image": "instrument.png"
+      "image": "pad.png"
     },
     { 
       "name": "Pad 5 (bowed)",
-      "image": "instrument.png"
+      "image": "pad.png"
     },
     { 
       "name": "Pad 6 (metallic)",
-      "image": "instrument.png"
+      "image": "pad.png"
     },
     { 
       "name": "Pad 7 (halo)",
-      "image": "instrument.png"
+      "image": "pad.png"
     },
     { 
       "name": "Pad 8 (sweep)",
-      "image": "instrument.png"
+      "image": "pad.png"
     },
     { 
       "name": "Sitar",
-      "image": "instrument.png"
+      "image": "sitar.png"
     },
     { 
       "name": "Banjo",
-      "image": "instrument.png"
+      "image": "banjo.png"
     },
     { 
       "name": "Shamisen",
-      "image": "instrument.png"
+      "image": "shamisen.png"
     },
     { 
       "name": "Koto",
-      "image": "instrument.png"
+      "image": "koto.png"
     },
     { 
       "name": "Kalimba",
-      "image": "instrument.png"
+      "image": "kalimba.png"
     },
     { 
       "name": "Bagpipe",
-      "image": "instrument.png"
+      "image": "bagpipe.png"
     },
     { 
       "name": "Fiddle",
-      "image": "instrument.png"
+      "image": "fiddle.png"
     },
     { 
       "name": "Shanai",
-      "image": "instrument.png"
+      "image": "shanai.png"
     },
     { 
       "name": "Tinkle Bell",
-      "image": "instrument.png"
+      "image": "tinkle-bell.png"
     },
     { 
       "name": "Agogo",
-      "image": "instrument.png"
+      "image": "agogo.png"
     },
     { 
       "name": "Steel",
-      "image": "instrument.png"
+      "image": "steel.png"
     },
     { 
       "name": "Woodblock",
-      "image": "instrument.png"
+      "image": "woodblock.png"
     },
     { 
       "name": "Taiko Drum",
-      "image": "instrument.png"
+      "image": "taiko-drum.png"
     },
     { 
       "name": "Melodic Tom",
-      "image": "instrument.png"
+      "image": "melodic-tom.png"
     },
     { 
       "name": "Synth Tom",
-      "image": "instrument.png"
+      "image": "synth.png"
     },
     { 
       "name": "Reverse Cymbal",
-      "image": "instrument.png"
+      "image": "cymbal.png"
     },
     { 
       "name": "Guitar Fret Noise",
-      "image": "instrument.png"
+      "image": "guitar.png"
     },
     { 
       "name": "Breath Noise",
-      "image": "instrument.png"
+      "image": "keyboard.png"
     },
     { 
       "name": "Seashore",
-      "image": "instrument.png"
+      "image": "keyboard.png"
     }
   ]
 }
