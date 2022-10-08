@@ -27,6 +27,14 @@ export default class GenericInstrumentPage extends Component {
       let parent = note.parentElement;
 
       parent.addEventListener("mouseover", (e) => {
+        if (e.screenY <= parent.screenY + 6.5) {
+          note.style.top = '-33.5px';
+        } else if (e.screenY == parent.screenY + 13) {
+          note.style.top = '-27px';
+        } else if (e.screenY == parent.screenY + 21.5) {
+          note.style.top = '-21.5px';
+        }
+
         note.classList.add('hover');
       });
 
@@ -57,7 +65,7 @@ export default class GenericInstrumentPage extends Component {
         if (this.state.time.notes === 8) className += ' bar-notes--eight';
 
         notes.push(
-          <div className={className} key={note} data-note-bar={bar} data-note={note} data-wroten-notep={null}>
+          <div className={className} key={note} data-note-bar={bar} data-note={note} data-wroten-note={0}>
             <span className="line"></span>
             <span className="line"></span>
             <span className="line"></span>
