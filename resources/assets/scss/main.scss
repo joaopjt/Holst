@@ -193,12 +193,34 @@ body {
   position: relative;
   width: 25%;
 
+  &[data-wroten-note="C"].note,
+  &[data-wroten-note="D"].note,
+  &[data-wroten-note="E"].note,
+  &[data-wroten-note="F"].note,
+  &[data-wroten-note="G"].note,
+  &[data-wroten-note="A"].note,
+  &[data-wroten-note="B"].note {
+    display: block;
+    fill: 'black';
+    opacity: 1;
+  }
+
   .note {
     background: url('/assets/images/svg/note.svg') no-repeat;
     background-position: center center;
     background-size: contain;
+    display: none;
+    fill: 'black';
+    height: 74px;
+    left: calc(50% - 16px);
+    opacity: 0.5;
     position: absolute;
-    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+
+    &.hover {
+      display: block;
+    }
   }
 
   &--clef {

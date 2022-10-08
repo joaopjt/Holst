@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// F = 3.5px
+// E = 8.5px
+
 export default class GenericInstrumentPage extends Component {
   constructor(props) {
     super(props);
@@ -11,6 +14,26 @@ export default class GenericInstrumentPage extends Component {
         bars: props.bars || 4
       }
     }
+  }
+
+  componentDidMount() {
+    this.setupNotesListener();
+  }
+
+  setupNotesListener() {
+    const notes = document.querySelectorAll('div.bar-notes > span.note');
+
+    notes.forEach((note) => {
+      let parent = note.parentElement;
+
+      parent.addEventListener("mouseover", (e) => {
+        note.classList.add('hover');
+      });
+
+      parent.addEventListener("mouseout", (e) => {
+        note.classList.remove('hover');
+      });
+    })
   }
 
   changeTitle(e) {
@@ -34,7 +57,7 @@ export default class GenericInstrumentPage extends Component {
         if (this.state.time.notes === 8) className += ' bar-notes--eight';
 
         notes.push(
-          <div className={className} data-note-bar={bar} data-note={note}>
+          <div className={className} key={note} data-note-bar={bar} data-note={note} data-wroten-notep={null}>
             <span className="line"></span>
             <span className="line"></span>
             <span className="line"></span>
@@ -42,10 +65,10 @@ export default class GenericInstrumentPage extends Component {
             <span className="line"></span>
             <span className="note"></span>
           </div>
-        )
+        );
       }
 
-      bars.push(<div className="bar" data-bar={bar}>{notes}</div>);
+      bars.push(<div className="bar" key={bar} data-bar={bar}>{notes}</div>);
     }
 
     return (

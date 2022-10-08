@@ -33,7 +33,7 @@ export default class PianoPage extends Component {
         if (this.state.time.notes === 8) className += ' bar-notes--eight';
 
         notes.push(
-          <div className={className} data-note-bar={bar} data-note={note}>
+          <div className={className} key={note} data-note-bar={bar} data-note={note}>
             <span className="line"></span>
             <span className="line"></span>
             <span className="line"></span>
@@ -43,7 +43,7 @@ export default class PianoPage extends Component {
         )
       }
 
-      bars.push(<div className="bar" data-bar={bar}>{notes}</div>);
+      bars.push(<div className="bar" key={bar} data-bar={bar}>{notes}</div>);
     }
 
     return (
