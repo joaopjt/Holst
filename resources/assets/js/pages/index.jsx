@@ -24,22 +24,26 @@ export default class App extends Component {
         <main className="main">
           <Router>
             <Routes>
-              <Route path="/piano" element={<PianoPage instrument="Acustic Piano"/>} />
-              <Route path="/flute" element={<GenericInstrumentPage instrument="Flute"/>} />
-              <Route path="/violin" element={<GenericInstrumentPage instrument="Violin"/>} />
-              <Route path="/viola" element={<GenericInstrumentPage instrument="Viola"/>} />
-              <Route path="/cello" element={<GenericInstrumentPage instrument="Cello"/>} />
-              <Route path="/basson" element={<GenericInstrumentPage instrument="Bassoon"/>} />
-              <Route path="/harp" element={<GenericInstrumentPage instrument="Harp"/>} />
-              <Route path="/clavinet" element={<GenericInstrumentPage instrument="Clavinet"/>} />
-              <Route path="/vibraphone" element={<GenericInstrumentPage instrument="Vibraphone"/>} />
-              <Route path="/marimba" element={<GenericInstrumentPage instrument="Marimba"/>} />
-              <Route path="/xylophone" element={<GenericInstrumentPage instrument="Xylophone"/>} />
-              <Route path="/tubular-bells" element={<GenericInstrumentPage instrument="Tubular Bells"/>} />
-              <Route path="/eletric-guitar" element={<GenericInstrumentPage instrument="Eletric Guitar"/>} />
-              <Route path="/trumpet" element={<GenericInstrumentPage instrument="Trumped"/>} />
-              <Route path="/trombone" element={<GenericInstrumentPage instrument="Trombone"/>} />
-              <Route path="/tuba" element={<GenericInstrumentPage instrument="Tuba"/>} />
+              <Route path="/piano" element={<PianoPage instrument="Acustic Piano" notes={8} bars={4} />} />
+              <Route path="/flute" element={<GenericInstrumentPage instrument="Flute" notes={8} bars={4} />} />
+              <Route path="/violin" element={<GenericInstrumentPage instrument="Violin" notes={8} bars={4} />} />
+              <Route path="/viola" element={<GenericInstrumentPage instrument="Viola" notes={8} bars={4} />} />
+              <Route path="/cello" element={<GenericInstrumentPage instrument="Cello" notes={8} bars={4} />} />
+              <Route path="/basson" element={<GenericInstrumentPage instrument="Bassoon" notes={8} bars={4} />} />
+              <Route path="/harp" element={<GenericInstrumentPage instrument="Harp" notes={8} bars={4} />} />
+              <Route path="/clavinet" element={<GenericInstrumentPage instrument="Clavinet" notes={8} bars={4} />} />
+              <Route path="/vibraphone" element={<GenericInstrumentPage instrument="Vibraphone" notes={8} bars={4} />} />
+              <Route path="/marimba" element={<GenericInstrumentPage instrument="Marimba" notes={8} bars={4} />} />
+              <Route path="/xylophone" element={<GenericInstrumentPage instrument="Xylophone" notes={8} bars={4} />} />
+              <Route path="/tubular-bells" element={<GenericInstrumentPage instrument="Tubular Bells" notes={8} bars={4} />} />
+              <Route path="/eletric-guitar" element={<GenericInstrumentPage instrument="Eletric Guitar" notes={8} bars={4} />} />
+              <Route path="/trumpet" element={<GenericInstrumentPage instrument="Trumped" notes={4} bars={4} />} />
+              <Route path="/trombone" element={<GenericInstrumentPage instrument="Trombone" notes={4} bars={4} />} />
+              <Route path="/tuba" element={<GenericInstrumentPage instrument="Tuba" notes={4} bars={4} />} />
+              <Route path="/french-horn" element={<GenericInstrumentPage instrument="French Horn" notes={4} bars={4} />} />
+              <Route path="/brass-section" element={<GenericInstrumentPage instrument="Brass Section" notes={4} bars={4} />} />
+              <Route path="/soprano-sax" element={<GenericInstrumentPage instrument="Soprano Sax" notes={4} bars={4} />} />
+              <Route path="/alto-sax" element={<GenericInstrumentPage instrument="Alto Sax" notes={4} bars={4} />} />
               <Route path="/app/:id" element={<ComposerPage />} />
               <Route path="/app" element={<InstrumentsPage />} />
               <Route path="/" element={<HomePage />} />

@@ -7,8 +7,8 @@ export default class GenericInstrumentPage extends Component {
       title: 'Paper Title',
       instrument: props.instrument,
       time: {
-        notes: 8,
-        bars: 4
+        notes: props.notes || 4,
+        bars: props.bars || 4
       }
     }
   }
