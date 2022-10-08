@@ -233,6 +233,19 @@ body {
     width: 14.285%;
   }
 
+  &--8-notes:before {
+    background: url('/assets/images/svg/numbers/8.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    content: '';
+    height: 20.63px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+    width: 16.58px;
+  }
+
   &--7-notes:before {
     background: url('/assets/images/svg/numbers/7.svg') no-repeat;
     background-position: center center;
