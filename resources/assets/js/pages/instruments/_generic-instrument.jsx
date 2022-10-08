@@ -27,6 +27,7 @@ export default class GenericInstrumentPage extends Component {
       for(let note = 0; note < this.state.time.notes; note++) {
         let className = "bar-notes";
 
+        if (this.state.time.notes === 2) className += ' bar-notes--two';
         if (this.state.time.notes === 5) className += ' bar-notes--five';
         if (this.state.time.notes === 6) className += ' bar-notes--six';
         if (this.state.time.notes === 7) className += ' bar-notes--seven';
