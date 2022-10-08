@@ -153,13 +153,16 @@ body {
   position: relative;
 
   &--piano:before {
-    background: url('assets/images/img.png');
-    background-repeat: no-repeat;
+    background: url('/assets/images/svg/accolade.svg') no-repeat;
+    background-position: center center;
+    background-size: contain;
     content: '';
     display: inline-block;
+    height: 147px;
     position: absolute;
     left: -10px;
     transform: translateX(-100%);
+    width: 24px;
   }
 }
 
@@ -214,6 +217,21 @@ body {
       top: 50%;
       transform: translate(50%, -50%);
       width: 6px;
+    }
+  }
+
+  &--bass-clef {
+    &:before {
+      background: url('/assets/images/svg/bass-clef.svg') no-repeat;
+      background-position: center center;
+      background-size: cover;
+      content: '';
+      height: 55px;
+      position: absolute;
+      left: 50%;
+      top: 62%;
+      transform: translate(-50%, -50%);
+      width: 36px;
     }
   }
 

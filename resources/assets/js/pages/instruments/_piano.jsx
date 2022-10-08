@@ -74,7 +74,7 @@ export default class PianoPage extends Component {
             </div>
             <div className="paper-line paper-line--bass-choir">
               <div className="bar bar--first" data-bar={0}>
-                <div className="bar-notes bar-notes--two" data-note-bar={-2} data-note={1}>
+                <div className="bar-notes bar-notes--bass-clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
