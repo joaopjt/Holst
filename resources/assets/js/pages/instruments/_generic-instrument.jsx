@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class PianoPage extends Component {
+export default class GenericInstrumentPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -51,7 +51,7 @@ export default class PianoPage extends Component {
           <input className="paper-title paper-title--input" defaultValue={this.state.title} onChange={this.changeTitle.bind(this)}/>
           <p>{this.state.instrument}</p>
 
-          <div className="paper-content paper-content--piano">
+          <div className="paper-content">
             <div className="paper-line">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
@@ -62,26 +62,6 @@ export default class PianoPage extends Component {
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                </div>
-              </div>
-
-              {bars}
-            </div>
-            <div className="paper-line paper-line--bass-choir">
-              <div className="bar bar--first" data-bar={0}>
-                <div className="bar-notes bar-notes--bass-clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                </div>
-                <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
@@ -94,7 +74,7 @@ export default class PianoPage extends Component {
             </div>
           </div>
 
-          <div className="paper-content paper-content--piano">
+          <div className="paper-content">
             <div className="paper-line">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
@@ -105,26 +85,6 @@ export default class PianoPage extends Component {
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                </div>
-              </div>
-
-              {bars}
-            </div>
-            <div className="paper-line paper-line--bass-choir">
-              <div className="bar bar--first" data-bar={0}>
-                <div className="bar-notes bar-notes--bass-clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                </div>
-                <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
@@ -137,7 +97,7 @@ export default class PianoPage extends Component {
             </div>
           </div>
 
-          <div className="paper-content paper-content--piano">
+          <div className="paper-content">
             <div className="paper-line">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
@@ -148,26 +108,6 @@ export default class PianoPage extends Component {
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                </div>
-              </div>
-
-              {bars}
-            </div>
-            <div className="paper-line paper-line--bass-choir">
-              <div className="bar bar--first" data-bar={0}>
-                <div className="bar-notes bar-notes--bass-clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                </div>
-                <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
@@ -180,7 +120,7 @@ export default class PianoPage extends Component {
             </div>
           </div>
 
-          <div className="paper-content paper-content--piano">
+          <div className="paper-content">
             <div className="paper-line">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
@@ -201,16 +141,88 @@ export default class PianoPage extends Component {
 
               {bars}
             </div>
-            <div className="paper-line paper-line--bass-choir">
+          </div>
+
+          <div className="paper-content">
+            <div className="paper-line">
               <div className="bar bar--first" data-bar={0}>
-                <div className="bar-notes bar-notes--bass-clef bar-notes--two" data-note-bar={-2} data-note={1}>
+                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
                 </div>
-                <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
+                <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                </div>
+              </div>
+
+              {bars}
+            </div>
+          </div>
+
+          <div className="paper-content">
+            <div className="paper-line">
+              <div className="bar bar--first" data-bar={0}>
+                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                </div>
+                <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                </div>
+              </div>
+
+              {bars}
+            </div>
+          </div>
+
+          <div className="paper-content">
+            <div className="paper-line">
+              <div className="bar bar--first" data-bar={0}>
+                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                </div>
+                <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                </div>
+              </div>
+
+              {bars}
+            </div>
+          </div>
+
+          <div className="paper-content">
+            <div className="paper-line">
+              <div className="bar bar--first" data-bar={0}>
+                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
+                </div>
+                <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
