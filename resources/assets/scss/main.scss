@@ -206,19 +206,19 @@ body {
       transform: translate(-50%, -50%);
       width: 23px;
     }
+  }
 
-    &:after {
-      background: url('/assets/images/svg/time-signature.svg') no-repeat;
-      background-position: center center;
-      background-size: cover;
-      content: '';
-      height: 27px;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translate(50%, -50%);
-      width: 6px;
-    }
+  &--time-signature:after {
+    background: url('/assets/images/svg/time-signature.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    content: '';
+    height: 27px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    width: 6px;
   }
 
   &--bass-clef {

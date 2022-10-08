@@ -56,7 +56,7 @@ export default class GenericInstrumentPage extends Component {
           <div className="paper-content">
             <div className="paper-line">
               <div className="bar bar--first" data-bar={0}>
-                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
+                <div className="bar-notes bar-notes--clef bar-notes--time-signature bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
@@ -86,7 +86,7 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line"></span>
                   <span className="line"></span>
                 </div>
-                <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
+                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
@@ -109,7 +109,7 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line"></span>
                   <span className="line"></span>
                 </div>
-                <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
+                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
@@ -132,7 +132,7 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line"></span>
                   <span className="line"></span>
                 </div>
-                <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
+                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
@@ -155,7 +155,7 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line"></span>
                   <span className="line"></span>
                 </div>
-                <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
+                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
@@ -178,7 +178,7 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line"></span>
                   <span className="line"></span>
                 </div>
-                <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
+                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
@@ -201,7 +201,7 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line"></span>
                   <span className="line"></span>
                 </div>
-                <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
+                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
@@ -224,7 +224,7 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line"></span>
                   <span className="line"></span>
                 </div>
-                <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
+                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
                   <span className="line"></span>
                   <span className="line"></span>
