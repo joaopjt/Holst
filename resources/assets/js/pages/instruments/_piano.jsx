@@ -30,6 +30,7 @@ export default class PianoPage extends Component {
         if (this.state.time.notes === 5) className += ' bar-notes--five';
         if (this.state.time.notes === 6) className += ' bar-notes--six';
         if (this.state.time.notes === 7) className += ' bar-notes--seven';
+        if (this.state.time.notes === 8) className += ' bar-notes--eight';
 
         notes.push(
           <div className={className} data-note-bar={bar} data-note={note}>
