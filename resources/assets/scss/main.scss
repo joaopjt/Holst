@@ -193,6 +193,14 @@ body {
   position: relative;
   width: 25%;
 
+  .note {
+    background: url('/assets/images/svg/note.svg') no-repeat;
+    background-position: center center;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+  }
+
   &--clef {
     &:before {
       background: url('/assets/images/svg/clef.svg') no-repeat;

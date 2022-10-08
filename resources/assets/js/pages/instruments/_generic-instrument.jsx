@@ -40,6 +40,7 @@ export default class GenericInstrumentPage extends Component {
             <span className="line"></span>
             <span className="line"></span>
             <span className="line"></span>
+            <span className="note"></span>
           </div>
         )
       }

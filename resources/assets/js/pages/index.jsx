@@ -43,7 +43,8 @@ export default class App extends Component {
               <Route path="/french-horn" element={<GenericInstrumentPage instrument="French Horn" notes={4} bars={4} />} />
               <Route path="/brass-section" element={<GenericInstrumentPage instrument="Brass Section" notes={4} bars={4} />} />
               <Route path="/soprano-sax" element={<GenericInstrumentPage instrument="Soprano Sax" notes={4} bars={4} />} />
-              <Route path="/alto-sax" element={<GenericInstrumentPage instrument="Alto Sax" notes={4} bars={4} />} />
+              <Route path="/alto-sax" element={<GenericInstrumentPage instrument="Alto Sax" nottes={4} bars={4} />} />
+              <Route path="/baritone-sax" element={<GenericInstrumentPage instrument="Baritone Sax" nottes={8} bars={4} />} />
               <Route path="/app/:id" element={<ComposerPage />} />
               <Route path="/app" element={<InstrumentsPage />} />
               <Route path="/" element={<HomePage />} />
