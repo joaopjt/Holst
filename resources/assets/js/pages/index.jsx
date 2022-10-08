@@ -25,7 +25,8 @@ export default class App extends Component {
           <Router>
             <Routes>
               <Route path="/piano" element={<PianoPage instrument="Acustic Piano"/>} />
-              <Route path="/flute" element={<GenericInstrumentPage instrument="flute"/>} />
+              <Route path="/flute" element={<GenericInstrumentPage instrument="Flute"/>} />
+              <Route path="/violin" element={<GenericInstrumentPage instrument="Violin"/>} />
               <Route path="/app/:id" element={<ComposerPage />} />
               <Route path="/app" element={<InstrumentsPage />} />
               <Route path="/" element={<HomePage />} />
