@@ -20,11 +20,23 @@ export default class GenericInstrumentPage extends Component {
     this.setupNotesListener();
   }
 
+  noteListener(line, e) {
+    let note = e.target.dataset['note'];
+
+    e.target.classList.add('active');
+    e.target.classList.remove('hover');
+  }
+
   lineListenerOver(e) {
     let note = document.createElement('span');
 
     if (e.target.parentElement.dataset.wrotenNote == "0") {
       note.classList.add('note');
+      note.classList.add('hover');
+
+      note.addEventListener('click', this.noteListener.bind(this, e.target));
+
+      e.target.appendChild(note);
     }
   }
 

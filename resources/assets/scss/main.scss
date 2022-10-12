@@ -214,11 +214,18 @@ body {
     left: calc(50% - 16px);
     opacity: 0.5;
     position: absolute;
+    top: -37.5px;
     transform: translateX(-50%);
     width: 36px;
+    z-index: 2;
 
     &.hover {
       display: block;
+    }
+
+    &.active {
+      display: block;
+      opacity: 1;
     }
 
     &--solo {
@@ -434,14 +441,31 @@ body {
 }
 
 .line {
-  background: $black-color;
   display: inline-block;
-  margin: 2.5px 0;
+  padding: 2.5px 0;
+  position: relative;
   height: 1px;
   width: 100%;
+  z-index: 0;
+
+  &:before {
+    background: rgb(0, 0, 0);
+    content: '';
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
 
   &--blank {
     background: none;
-    margin: 2.5px 0;
+    padding: 2.5px 0;
+
+    &:before {
+      display: none;
+    }
   }
 }
