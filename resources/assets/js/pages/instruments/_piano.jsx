@@ -34,11 +34,29 @@ export default class PianoPage extends Component {
 
         notes.push(
           <div className={className} key={note} data-note-bar={bar} data-note={note}>
-            <span className="line"></span>
-            <span className="line"></span>
-            <span className="line"></span>
-            <span className="line"></span>
-            <span className="line"></span>
+            <span class="line line--blank" data-note="F"></span>
+            <span class="line line--blank" data-note="E"></span>
+            <span class="line line--blank" data-note="D"></span>
+            <span class="line line--blank" data-note="C"></span>
+            <span class="line line--blank" data-note="B"></span>
+            <span class="line line--blank" data-note="A"></span>
+            <span class="line line--blank" data-note="G"></span>
+            <span class="line" data-note="F"></span>
+            <span class="line line--blank" data-note="E"></span>
+            <span class="line" data-note="D"></span>
+            <span class="line line--blank" data-note="C"></span>
+            <span class="line" data-note="B"></span>
+            <span class="line line--blank" data-note="A"></span>
+            <span class="line" data-note="G"></span>
+            <span class="line line--blank" data-note="F"></span>
+            <span class="line" data-note="E"></span>
+            <span class="line line--blank" data-note="D"></span>
+            <span class="line line--blank" data-note="C"></span>
+            <span class="line line--blank" data-note="B"></span>
+            <span class="line line--blank" data-note="A"></span>
+            <span class="line line--blank" data-note="G"></span>
+            <span class="line line--blank" data-note="F"></span>
+            <span class="line line--blank" data-note="E"></span>
           </div>
         )
       }
@@ -56,26 +74,54 @@ export default class PianoPage extends Component {
             <div className="paper-line">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
                 <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
               </div>
 
@@ -84,26 +130,54 @@ export default class PianoPage extends Component {
             <div className="paper-line paper-line--bass-choir">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--bass-clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
                 <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
               </div>
 
@@ -115,26 +189,54 @@ export default class PianoPage extends Component {
             <div className="paper-line">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
                 <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
               </div>
 
@@ -143,26 +245,54 @@ export default class PianoPage extends Component {
             <div className="paper-line paper-line--bass-choir">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--bass-clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
                 <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
               </div>
 
@@ -174,26 +304,54 @@ export default class PianoPage extends Component {
             <div className="paper-line">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
                 <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
               </div>
 
@@ -202,26 +360,54 @@ export default class PianoPage extends Component {
             <div className="paper-line paper-line--bass-choir">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--bass-clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
                 <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
               </div>
 
@@ -233,26 +419,54 @@ export default class PianoPage extends Component {
             <div className="paper-line">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
                 <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
               </div>
 
@@ -261,26 +475,54 @@ export default class PianoPage extends Component {
             <div className="paper-line paper-line--bass-choir">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--bass-clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
                 <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
-                  <span className="line line--blank"></span>
-                  <span className="line"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
+                  <span class="line" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line" data-note="E"></span>
+                  <span class="line line--blank" data-note="D"></span>
+                  <span class="line line--blank" data-note="C"></span>
+                  <span class="line line--blank" data-note="B"></span>
+                  <span class="line line--blank" data-note="A"></span>
+                  <span class="line line--blank" data-note="G"></span>
+                  <span class="line line--blank" data-note="F"></span>
+                  <span class="line line--blank" data-note="E"></span>
                 </div>
               </div>
 
