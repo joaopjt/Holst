@@ -33,7 +33,7 @@ export default class PianoPage extends Component {
         if (this.state.time.notes === 8) className += ' bar-notes--eight';
 
         notes.push(
-          <div className={className} key={note} data-note-bar={bar} data-note={note}>
+          <div className={className} key={note} data-note-bar={bar} data-note={note} data-wroten-note={0}>
             <span class="line line--blank" data-note="F"></span>
             <span class="line line--blank" data-note="E"></span>
             <span class="line line--blank" data-note="D"></span>
