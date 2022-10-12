@@ -64,16 +64,16 @@ export default class GenericInstrumentPage extends Component {
         if (this.state.time.notes === 8) className += ' bar-notes--eight';
 
         notes.push(
-          <div className={className} key={note} data-note-bar={bar} data-note={note} data-wroten-note={0}>
-            <span className="line"></span>
-            <span className="line line--blank"></span>
-            <span className="line"></span>
-            <span className="line line--blank"></span>
-            <span className="line"></span>
-            <span className="line line--blank"></span>
-            <span className="line"></span>
-            <span className="line line--blank"></span>
-            <span className="line"></span>
+          <div class={className} key={note} data-note-bar={bar} data-note={note} data-wroten-note={0}>
+            <span class="line"></span>
+            <span class="line line--blank"></span>
+            <span class="line"></span>
+            <span class="line line--blank"></span>
+            <span class="line"></span>
+            <span class="line line--blank"></span>
+            <span class="line"></span>
+            <span class="line line--blank"></span>
+            <span class="line"></span>
           </div>
         );
       }

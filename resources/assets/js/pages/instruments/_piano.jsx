@@ -57,16 +57,24 @@ export default class PianoPage extends Component {
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
               </div>
@@ -77,16 +85,24 @@ export default class PianoPage extends Component {
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--bass-clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
               </div>
@@ -100,16 +116,24 @@ export default class PianoPage extends Component {
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
               </div>
@@ -120,16 +144,24 @@ export default class PianoPage extends Component {
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--bass-clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
               </div>
@@ -143,16 +175,24 @@ export default class PianoPage extends Component {
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
               </div>
@@ -163,16 +203,24 @@ export default class PianoPage extends Component {
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--bass-clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
               </div>
@@ -186,16 +234,24 @@ export default class PianoPage extends Component {
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
               </div>
@@ -206,16 +262,24 @@ export default class PianoPage extends Component {
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--bass-clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
               </div>
