@@ -33,30 +33,30 @@ export default class PianoPage extends Component {
         if (this.state.time.notes === 8) className += ' bar-notes--eight';
 
         notes.push(
-          <div class={className} key={note} data-note-bar={bar} data-note={note} data-wroten-note={0}>
-            <span class="line line--blank" data-note="F"></span>
-            <span class="line line--blank" data-note="E"></span>
-            <span class="line line--blank" data-note="D"></span>
-            <span class="line line--blank" data-note="C"></span>
-            <span class="line line--blank" data-note="B"></span>
-            <span class="line line--blank" data-note="A"></span>
-            <span class="line line--blank" data-note="G"></span>
-            <span class="line" data-note="F"></span>
-            <span class="line line--blank" data-note="E"></span>
-            <span class="line" data-note="D"></span>
-            <span class="line line--blank" data-note="C"></span>
-            <span class="line" data-note="B"></span>
-            <span class="line line--blank" data-note="A"></span>
-            <span class="line" data-note="G"></span>
-            <span class="line line--blank" data-note="F"></span>
-            <span class="line" data-note="E"></span>
-            <span class="line line--blank" data-note="D"></span>
-            <span class="line line--blank" data-note="C"></span>
-            <span class="line line--blank" data-note="B"></span>
-            <span class="line line--blank" data-note="A"></span>
-            <span class="line line--blank" data-note="G"></span>
-            <span class="line line--blank" data-note="F"></span>
-            <span class="line line--blank" data-note="E"></span>
+          <div className={className} key={note} data-note-bar={bar} data-note={note} data-wroten-note={0}>
+            <span className="line line--blank" data-note="F"></span>
+            <span className="line line--blank" data-note="E"></span>
+            <span className="line line--blank" data-note="D"></span>
+            <span className="line line--blank" data-note="C"></span>
+            <span className="line line--blank" data-note="B"></span>
+            <span className="line line--blank" data-note="A"></span>
+            <span className="line line--blank" data-note="G"></span>
+            <span className="line" data-note="F"></span>
+            <span className="line line--blank" data-note="E"></span>
+            <span className="line" data-note="D"></span>
+            <span className="line line--blank" data-note="C"></span>
+            <span className="line" data-note="B"></span>
+            <span className="line line--blank" data-note="A"></span>
+            <span className="line" data-note="G"></span>
+            <span className="line line--blank" data-note="F"></span>
+            <span className="line" data-note="E"></span>
+            <span className="line line--blank" data-note="D"></span>
+            <span className="line line--blank" data-note="C"></span>
+            <span className="line line--blank" data-note="B"></span>
+            <span className="line line--blank" data-note="A"></span>
+            <span className="line line--blank" data-note="G"></span>
+            <span className="line line--blank" data-note="F"></span>
+            <span className="line line--blank" data-note="E"></span>
           </div>
         )
       }
@@ -81,15 +81,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -106,15 +106,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -137,15 +137,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -162,15 +162,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -196,15 +196,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -221,15 +221,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -252,15 +252,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -277,15 +277,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -311,15 +311,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -336,15 +336,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -367,15 +367,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -392,15 +392,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -426,15 +426,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -451,15 +451,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -482,15 +482,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -507,15 +507,15 @@ export default class PianoPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>

@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-// F = 3.5px
-// E = 8.5px
-
 export default class GenericInstrumentPage extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +17,7 @@ export default class GenericInstrumentPage extends Component {
     this.setupNotesListener();
   }
 
-  noteListener(line, e) {
+  noteListener(e) {
     let note = e.target.dataset['note'];
 
     e.target.classList.add('active');
@@ -34,14 +31,16 @@ export default class GenericInstrumentPage extends Component {
       note.classList.add('note');
       note.classList.add('hover');
 
-      e.target.appendChild(note);
+      note.addEventListener("click", this.noteListener.bind(this));
 
-      note.addEventListener('click', this.noteListener.bind(this, e.target));
+      e.target.appendChild(note);
     }
   }
 
   lineListenerOut(e) {
-    e.target.removeChild(e.target.querySelector('span.note:not(.active)'));
+    let note = e.target.querySelector('span.note:not(.active)');
+
+    if (note) e.target.removeChild(note);
   }
 
   setupNotesListener() {
@@ -76,30 +75,30 @@ export default class GenericInstrumentPage extends Component {
         if (this.state.time.notes === 8) className += ' bar-notes--eight';
 
         notes.push(
-          <div class={className} key={note} data-note-bar={bar} data-note={note} data-wroten-note={0}>
-            <span class="line line--blank" data-note="F"></span>
-            <span class="line line--blank" data-note="E"></span>
-            <span class="line line--blank" data-note="D"></span>
-            <span class="line line--blank" data-note="C"></span>
-            <span class="line line--blank" data-note="B"></span>
-            <span class="line line--blank" data-note="A"></span>
-            <span class="line line--blank" data-note="G"></span>
-            <span class="line" data-note="F"></span>
-            <span class="line line--blank" data-note="E"></span>
-            <span class="line" data-note="D"></span>
-            <span class="line line--blank" data-note="C"></span>
-            <span class="line" data-note="B"></span>
-            <span class="line line--blank" data-note="A"></span>
-            <span class="line" data-note="G"></span>
-            <span class="line line--blank" data-note="F"></span>
-            <span class="line" data-note="E"></span>
-            <span class="line line--blank" data-note="D"></span>
-            <span class="line line--blank" data-note="C"></span>
-            <span class="line line--blank" data-note="B"></span>
-            <span class="line line--blank" data-note="A"></span>
-            <span class="line line--blank" data-note="G"></span>
-            <span class="line line--blank" data-note="F"></span>
-            <span class="line line--blank" data-note="E"></span>
+          <div className={className} key={note} data-note-bar={bar} data-note={note} data-wroten-note={0}>
+            <span className="line line--blank" data-note="F"></span>
+            <span className="line line--blank" data-note="E"></span>
+            <span className="line line--blank" data-note="D"></span>
+            <span className="line line--blank" data-note="C"></span>
+            <span className="line line--blank" data-note="B"></span>
+            <span className="line line--blank" data-note="A"></span>
+            <span className="line line--blank" data-note="G"></span>
+            <span className="line" data-note="F"></span>
+            <span className="line line--blank" data-note="E"></span>
+            <span className="line" data-note="D"></span>
+            <span className="line line--blank" data-note="C"></span>
+            <span className="line" data-note="B"></span>
+            <span className="line line--blank" data-note="A"></span>
+            <span className="line" data-note="G"></span>
+            <span className="line line--blank" data-note="F"></span>
+            <span className="line" data-note="E"></span>
+            <span className="line line--blank" data-note="D"></span>
+            <span className="line line--blank" data-note="C"></span>
+            <span className="line line--blank" data-note="B"></span>
+            <span className="line line--blank" data-note="A"></span>
+            <span className="line line--blank" data-note="G"></span>
+            <span className="line line--blank" data-note="F"></span>
+            <span className="line line--blank" data-note="E"></span>
           </div>
         );
       }
@@ -124,15 +123,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -149,15 +148,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -183,15 +182,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -208,15 +207,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -242,15 +241,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -267,15 +266,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -301,15 +300,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -326,15 +325,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -360,15 +359,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -385,15 +384,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -419,15 +418,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -444,15 +443,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -478,15 +477,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -503,15 +502,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -537,15 +536,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
@@ -562,15 +561,15 @@ export default class GenericInstrumentPage extends Component {
                   <span className="line line--blank" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
                   <span className="line line--blank" data-note="G"></span>
-                  <span class="line" data-note="F"></span>
+                  <span className="line" data-note="F"></span>
                   <span className="line line--blank" data-note="E"></span>
-                  <span class="line" data-note="D"></span>
+                  <span className="line" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
-                  <span class="line" data-note="B"></span>
+                  <span className="line" data-note="B"></span>
                   <span className="line line--blank" data-note="A"></span>
-                  <span class="line" data-note="G"></span>
+                  <span className="line" data-note="G"></span>
                   <span className="line line--blank" data-note="F"></span>
-                  <span class="line" data-note="E"></span>
+                  <span className="line" data-note="E"></span>
                   <span className="line line--blank" data-note="D"></span>
                   <span className="line line--blank" data-note="C"></span>
                   <span className="line line--blank" data-note="B"></span>
