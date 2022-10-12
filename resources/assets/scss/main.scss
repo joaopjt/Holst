@@ -221,6 +221,10 @@ body {
     &.hover {
       display: block;
     }
+
+    &--solo {
+      background: url('/assets/images/svg/note-solo.svg') no-repeat;
+    }
   }
 
   &--clef {
@@ -398,7 +402,7 @@ body {
     height: 21.41px;
     position: absolute;
     left: 50%;
-    top: 53%;
+    top: 54%;
     transform: translateX(-50%);
     width: 16.37px;
   }
@@ -411,7 +415,7 @@ body {
     height: 20.71px;
     position: absolute;
     left: 50%;
-    top: 53%;
+    top: 54%;
     transform: translateX(-50%);
     width: 17.78px;
   }
@@ -424,7 +428,7 @@ body {
     height: 21.12px;
     position: absolute;
     left: 50%;
-    top: 53%;
+    top: 54%;
     transform: translateX(-50%);
     width: 16.78px;
   }
@@ -433,12 +437,12 @@ body {
 .line {
   background: $black-color;
   display: inline-block;
-  margin: 5px 0;
+  margin: 2.5px 0;
   height: 1px;
   width: 100%;
 
-  &--bold {
-    height: 2px;
-    margin: 4.5px 0;
+  &--blank {
+    background: none;
+    margin: 2.5px 0;
   }
 }

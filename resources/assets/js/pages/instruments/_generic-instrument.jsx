@@ -20,27 +20,25 @@ export default class GenericInstrumentPage extends Component {
     this.setupNotesListener();
   }
 
+  lineListenerOver(e) {
+    let note = document.createElement('span');
+
+    if (e.target.parentElement.dataset.wrotenNote == "0") {
+      note.classList.add('note');
+    }
+  }
+
+  lineListenerOut(e) {
+    e.target.removeChild(e.target.querySelector('span.note'));
+  }
+
   setupNotesListener() {
-    const notes = document.querySelectorAll('div.bar-notes > span.note');
+    const lines = document.querySelectorAll('div.bar-notes > span.line');
 
-    notes.forEach((note) => {
-      let parent = note.parentElement;
+    lines.forEach((line) => {
+      line.addEventListener("mouseover", this.lineListenerOver.bind(this));
 
-      parent.addEventListener("mouseover", (e) => {
-        if (e.screenY <= parent.screenY + 6.5) {
-          note.style.top = '-33.5px';
-        } else if (e.screenY == parent.screenY + 13) {
-          note.style.top = '-27px';
-        } else if (e.screenY == parent.screenY + 21.5) {
-          note.style.top = '-21.5px';
-        }
-
-        note.classList.add('hover');
-      });
-
-      parent.addEventListener("mouseout", (e) => {
-        note.classList.remove('hover');
-      });
+      line.addEventListener("mouseout", this.lineListenerOut.bing(this));
     })
   }
 
@@ -59,6 +57,7 @@ export default class GenericInstrumentPage extends Component {
         let className = "bar-notes";
 
         if (this.state.time.notes === 2) className += ' bar-notes--two';
+        if (this.state.time.notes === 4) className += ' bar-notes--four';
         if (this.state.time.notes === 5) className += ' bar-notes--five';
         if (this.state.time.notes === 6) className += ' bar-notes--six';
         if (this.state.time.notes === 7) className += ' bar-notes--seven';
@@ -67,11 +66,14 @@ export default class GenericInstrumentPage extends Component {
         notes.push(
           <div className={className} key={note} data-note-bar={bar} data-note={note} data-wroten-note={0}>
             <span className="line"></span>
+            <span className="line line--blank"></span>
             <span className="line"></span>
+            <span className="line line--blank"></span>
             <span className="line"></span>
+            <span className="line line--blank"></span>
             <span className="line"></span>
+            <span className="line line--blank"></span>
             <span className="line"></span>
-            <span className="note"></span>
           </div>
         );
       }
@@ -90,39 +92,24 @@ export default class GenericInstrumentPage extends Component {
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--time-signature bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
-                  <span className="line"></span>
-                </div>
-              </div>
-
-              {bars}
-            </div>
-          </div>
-
-          <div className="paper-content">
-            <div className="paper-line">
-              <div className="bar bar--first" data-bar={0}>
-                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                </div>
-                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
-                  <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
               </div>
@@ -136,16 +123,24 @@ export default class GenericInstrumentPage extends Component {
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
               </div>
@@ -159,16 +154,24 @@ export default class GenericInstrumentPage extends Component {
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
               </div>
@@ -182,16 +185,24 @@ export default class GenericInstrumentPage extends Component {
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
               </div>
@@ -205,16 +216,24 @@ export default class GenericInstrumentPage extends Component {
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
               </div>
@@ -228,16 +247,24 @@ export default class GenericInstrumentPage extends Component {
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
               </div>
@@ -251,16 +278,55 @@ export default class GenericInstrumentPage extends Component {
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
                 <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
+                  <span className="line line--blank"></span>
+                  <span className="line"></span>
+                </div>
+              </div>
+
+              {bars}
+            </div>
+          </div>
+
+          <div className="paper-content">
+            <div className="paper-line">
+              <div className="bar bar--first" data-bar={0}>
+                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
+                  <span className="line"></span>
+                  <span className="line line--blank"></span>
+                  <span className="line"></span>
+                  <span className="line line--blank"></span>
+                  <span className="line"></span>
+                  <span className="line line--blank"></span>
+                  <span className="line"></span>
+                  <span className="line line--blank"></span>
+                  <span className="line"></span>
+                </div>
+                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
+                  <span className="line"></span>
+                  <span className="line line--blank"></span>
+                  <span className="line"></span>
+                  <span className="line line--blank"></span>
+                  <span className="line"></span>
+                  <span className="line line--blank"></span>
+                  <span className="line"></span>
+                  <span className="line line--blank"></span>
                   <span className="line"></span>
                 </div>
               </div>
