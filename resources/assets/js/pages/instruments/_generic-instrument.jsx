@@ -18,39 +18,44 @@ export default class GenericInstrumentPage extends Component {
   }
 
   noteListener(e) {
-    let note = e.target.dataset['note'];
+    // let note = e.target.dataset['note'];
 
     e.target.classList.add('active');
     e.target.classList.remove('hover');
   }
 
   lineListenerOver(e) {
-    let note = document.createElement('span');
+    let note = e.target.querySelector('span.note');
+    console.log(note);
 
     if (e.target.parentElement.dataset.wrotenNote == "0") {
-      note.classList.add('note');
       note.classList.add('hover');
-
-      note.addEventListener("click", this.noteListener.bind(this));
-
-      e.target.appendChild(note);
+    } else {
+      note.classList.add('remove');
     }
   }
 
   lineListenerOut(e) {
-    let note = e.target.querySelector('span.note:not(.active)');
+    let notes = e.target.querySelectorAll('span.note:not(.active)');
 
-    if (note) e.target.removeChild(note);
+    if (notes) {
+      notes.forEach((note) => {
+        note.classList.remove('hover');
+      });
+    }
   }
 
   setupNotesListener() {
     const lines = document.querySelectorAll('div.bar-notes > span.line');
+    let note = document.createElement('span');
 
     lines.forEach((line) => {
+      line.querySelector('span.note').addEventListener('click', this.noteListener.bind(this));
+
       line.addEventListener("mouseover", this.lineListenerOver.bind(this));
 
       line.addEventListener("mouseout", this.lineListenerOut.bind(this));
-    })
+    });
   }
 
   changeTitle(e) {
@@ -76,29 +81,75 @@ export default class GenericInstrumentPage extends Component {
 
         notes.push(
           <div className={className} key={note} data-note-bar={bar} data-note={note} data-wroten-note={0}>
-            <span className="line line--blank" data-note="F"></span>
-            <span className="line line--blank" data-note="E"></span>
-            <span className="line line--blank" data-note="D"></span>
-            <span className="line line--blank" data-note="C"></span>
-            <span className="line line--blank" data-note="B"></span>
-            <span className="line line--blank" data-note="A"></span>
-            <span className="line line--blank" data-note="G"></span>
-            <span className="line" data-note="F"></span>
-            <span className="line line--blank" data-note="E"></span>
-            <span className="line" data-note="D"></span>
-            <span className="line line--blank" data-note="C"></span>
-            <span className="line" data-note="B"></span>
-            <span className="line line--blank" data-note="A"></span>
-            <span className="line" data-note="G"></span>
-            <span className="line line--blank" data-note="F"></span>
-            <span className="line" data-note="E"></span>
-            <span className="line line--blank" data-note="D"></span>
-            <span className="line line--blank" data-note="C"></span>
-            <span className="line line--blank" data-note="B"></span>
-            <span className="line line--blank" data-note="A"></span>
-            <span className="line line--blank" data-note="G"></span>
-            <span className="line line--blank" data-note="F"></span>
-            <span className="line line--blank" data-note="E"></span>
+            <span className="line line--blank" data-note="F">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="E">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="D">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="C">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="B">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="A">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="G">
+              <span className="note"></span>
+            </span>
+            <span className="line" data-note="F">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="E">
+              <span className="note"></span>
+            </span>
+            <span className="line" data-note="D">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="C">
+              <span className="note"></span>
+            </span>
+            <span className="line" data-note="B">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="A">
+              <span className="note"></span>
+            </span>
+            <span className="line" data-note="G">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="F">
+              <span className="note"></span>
+            </span>
+            <span className="line" data-note="E">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="D">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="C">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="B">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="A">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="G">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="F">
+              <span className="note"></span>
+            </span>
+            <span className="line line--blank" data-note="E">
+              <span className="note"></span>
+            </span>
           </div>
         );
       }
@@ -109,179 +160,153 @@ export default class GenericInstrumentPage extends Component {
     return (
       <div className="content">
         <div className="paper">
-          <input className="paper-title paper-title--input" defaultValue={this.state.title} onChange={this.changeTitle.bind(this)}/>
+          <input className="paper-title paper-title--input" defaultValue={this.state.title} onChange={this.changeTitle.bind(this)} />
           <p>{this.state.instrument}</p>
 
           <div className="paper-content">
             <div className="paper-line">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--time-signature bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
                 </div>
-                <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                </div>
-              </div>
-
-              {bars}
-            </div>
-          </div>
-
-          <div className="paper-content">
-            <div className="paper-line">
-              <div className="bar bar--first" data-bar={0}>
-                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                </div>
-                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                </div>
-              </div>
-
-              {bars}
-            </div>
-          </div>
-
-          <div className="paper-content">
-            <div className="paper-line">
-              <div className="bar bar--first" data-bar={0}>
-                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                </div>
-                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
+                <div className="bar-notes bar-notes--8-notes bar-notes--4-bars bar-notes--two" data-note-bar={-1} data-note={2}>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
                 </div>
               </div>
 
@@ -293,172 +318,146 @@ export default class GenericInstrumentPage extends Component {
             <div className="paper-line">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
                 </div>
-                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                </div>
-              </div>
-
-              {bars}
-            </div>
-          </div>
-
-          <div className="paper-content">
-            <div className="paper-line">
-              <div className="bar bar--first" data-bar={0}>
-                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                </div>
-                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                </div>
-              </div>
-
-              {bars}
-            </div>
-          </div>
-
-          <div className="paper-content">
-            <div className="paper-line">
-              <div className="bar bar--first" data-bar={0}>
-                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                </div>
-                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
+                <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
                 </div>
               </div>
 
@@ -470,54 +469,146 @@ export default class GenericInstrumentPage extends Component {
             <div className="paper-line">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
                 </div>
-                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
+                <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
                 </div>
               </div>
 
@@ -529,60 +620,757 @@ export default class GenericInstrumentPage extends Component {
             <div className="paper-line">
               <div className="bar bar--first" data-bar={0}>
                 <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
                 </div>
-                <div className="bar-notes bar-notes--two" data-note-bar={0} data-note={2}>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
-                  <span className="line" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line" data-note="E"></span>
-                  <span className="line line--blank" data-note="D"></span>
-                  <span className="line line--blank" data-note="C"></span>
-                  <span className="line line--blank" data-note="B"></span>
-                  <span className="line line--blank" data-note="A"></span>
-                  <span className="line line--blank" data-note="G"></span>
-                  <span className="line line--blank" data-note="F"></span>
-                  <span className="line line--blank" data-note="E"></span>
+                <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
                 </div>
               </div>
 
               {bars}
             </div>
           </div>
+
+          <div className="paper-content">
+            <div className="paper-line">
+              <div className="bar bar--first" data-bar={0}>
+                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                </div>
+                <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                </div>
+              </div>
+
+              {bars}
+            </div>
+          </div>
+
+          <div className="paper-content">
+            <div className="paper-line">
+              <div className="bar bar--first" data-bar={0}>
+                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                </div>
+                <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                </div>
+              </div>
+
+              {bars}
+            </div>
+          </div>
+
+          <div className="paper-content">
+            <div className="paper-line">
+              <div className="bar bar--first" data-bar={0}>
+                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                </div>
+                <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                </div>
+              </div>
+
+              {bars}
+            </div>
+          </div>
+
+          <div className="paper-content">
+            <div className="paper-line">
+              <div className="bar bar--first" data-bar={0}>
+                <div className="bar-notes bar-notes--clef bar-notes--two" data-note-bar={-2} data-note={1}>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                </div>
+                <div className="bar-notes bar-notes--two" data-note-bar={-1} data-note={2}>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="D">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="C">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="B">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="A">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="G">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="F">
+                    <span className="note"></span>
+                  </span>
+                  <span className="line line--blank" data-note="E">
+                    <span className="note"></span>
+                  </span>
+                </div>
+              </div>
+
+              {bars}
+            </div>
+          </div>
+
         </div>
       </div>
     )
