@@ -26,7 +26,6 @@ export default class GenericInstrumentPage extends Component {
 
   lineListenerOver(e) {
     let note = e.target.querySelector('span.note');
-    console.log(note);
 
     if (e.target.parentElement.dataset.wrotenNote == "0") {
       note.classList.add('hover');
