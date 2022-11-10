@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "@hapi/hapi": "^20.2.2",
-    "africa.js": "^1.7.9-ALPHA-5",
+    "africa.js": "^2.0.6",
     "consign": "^0.1.6",
     "dotenv": "^10.0.0",
     "glob": "^7.1.2",
